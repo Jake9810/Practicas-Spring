@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en"  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="'Producto eliminado: '+${producto.nombre}"></title>
+</head>
+<body>
+<div>
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Precio</th>
+            <th>Cantidad</th>
+            <th>Picture</th>
+        </tr>
+        </thead>
+        <tbody>
+
+        <tr th:each="producto: ${productos}">
+            <td>
+                <span th:text="${producto.getId()}"></span>
+            </td>
+            <td>
+                <span th:text="${producto.getNombre()}"></span>
+            </td>
+            <td>
+                <span th:text="${producto.getPrecio()}"></span>
+            </td>
+            <td>
+                <span th:text="${producto.getCantidad()}"></span>
+            </td>
+            <td>
+                <span> <a th:href="@{/prt5/productos/{id}/modificar(id=${producto.id})}">modificar datos</a></span>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <di>
+        <span> <a href="/prt5/productos/crear">Agregar nuevo producto</a></span>
+    </di>
+</div>
+</body>
+</html>

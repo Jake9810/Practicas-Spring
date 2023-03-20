@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="'Producto '+${producto.nombre}+' agregado de manera correcta'"></title>
+</head>
+<body>
+    <h1>Detalles del producto</h1>
+    <p th:text="'Nombre: '+${producto.getNombre()}"/>
+    <p th:text="'Precio: '+${producto.getPrecio()}"/>
+    <p th:text="'Cantidad: '+${producto.getCantidad()}"/>
+    <div/>
+    <a href="/prt5/productos/crear">Agregar otro producto</a>
+    <a href="/prt5/productos/listar">Lista de productos</a>
+</body>
+</html>

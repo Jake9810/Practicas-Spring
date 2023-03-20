@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="'Producto modificado: '+${producto.nombre}"></title>
+</head>
+<body>
+<h1>Detalles del producto modificado </h1>
+<p th:text="'Nombre: '+${producto.getNombre()}"/>
+<p th:text="'Precio: '+${producto.getPrecio()}"/>
+<p th:text="'Cantidad: '+${producto.getCantidad()}"/>
+<div/>
+<a href="/prt5/productos/listar">Regresar a la lista de productos</a>
+</body>
+</html>

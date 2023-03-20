@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Agregar nuevo producto</title>
+</head>
+<body>
+    <h1>Datos del producto</h1>
+    <form action="#" th:action="@{/prt5/productos/crear}" th:object="${producto}" method="post">
+        <p>
+            Nombre: <input type="text" th:field="*{nombre}"/>
+        </p>
+        <p>
+            Cantidad: <input type="text" th:field="*{cantidad}"/>
+        </p>
+        <p>
+            Precio: <input type="text" th:field="*{precio}"/>
+        </p>
+        <p><input type="submit" value="Agregar" /> <input type="reset" value="Reset" /></p>
+    </form>
+</body>
+</html>

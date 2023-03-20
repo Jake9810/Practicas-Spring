@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title th:text="'Producto a eliminar: '+${producto.nombre}"></title>
+</head>
+<body>
+<h1>Detalles del producto a eliminar</h1>
+<form action="#"
+      th:action="@{/prt5/productos/{id}/eliminar(id=${producto.id})}"
+      th:object="${producto}"
+      method="post">
+    <p>
+        Nombre: <input type="text" th:field="*{nombre}"/>
+    </p>
+    <p>
+        Cantidad: <input type="text" th:field="*{cantidad}"/>
+    </p>
+    <p>
+        Precio: <input type="text" th:field="*{precio}"/>
+    </p>
+    <p><input type="submit" value="ELIMINAR" /> </p>
+</form>
+<div/>
+<a href="/prt5/productos/listar">CANCELAR</a>
+</body>
+</html>
